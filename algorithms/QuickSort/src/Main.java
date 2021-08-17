@@ -5,11 +5,12 @@ public class Main {
      */
     public static void main(String[] args) {
         int[] array = new int[] {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        System.out.println(arrayToString(array));
         quickSort(array, 0, array.length - 1);
+        System.out.println(arrayToString(array));
     }
 
     private static void quickSort(int[] arr, int from, int to) {
-        System.out.println(arrayToString(arr));
         if (from < to) {
             int divideIndex = partition(arr, from, to);
             quickSort(arr, from, divideIndex - 1);
