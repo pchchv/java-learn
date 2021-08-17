@@ -1,6 +1,11 @@
 public class Main {
+    /**
+     * Bubble sorting algorithm
+     *
+     * @param cmdLineArgs command-line arguments
+     */
     public static void main(String[] args) {
-        int[] array = new int[]{64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        int[] array = new int[] {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
         printArray(array);
         boolean isSorted = false;
         while (!isSorted) {
@@ -16,6 +21,7 @@ public class Main {
             printArray(array);
         }
     }
+
     private static void printArray(int[] arr) {
         System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
