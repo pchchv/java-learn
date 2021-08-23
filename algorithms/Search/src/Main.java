@@ -4,6 +4,7 @@ public class Main {
         selectionSort(array);
         System.out.println(arrayToString(array));
         //System.out.println(searchLinear(array, 57));
+        System.out.println(searchBinary(array, 57));
     }
 
     public static int searchLinear(int[] array, int elementToFind) {
@@ -13,6 +14,23 @@ public class Main {
             }
         }
         return -1;
+    }
+
+    public static int searchBinary(int[] array, int elementToFind) {
+        int startIndex = 0;
+        int endIndex = array.length - 1;
+        int middleIndex;
+        while (startIndex <= endIndex) {
+            middleIndex = startIndex + (endIndex - startIndex) / 2;
+            if (array[middleIndex] == elementToFind) {
+                return middleIndex;
+            } else if (array[middleIndex] > elementToFind) {
+                endIndex = middleIndex -1;
+            } else {
+                startIndex = middleIndex + 1;
+            }
+        }
+        return  -1;
     }
 
     public static int[] selectionSort(int[] array) {
