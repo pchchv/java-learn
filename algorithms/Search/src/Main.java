@@ -1,10 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         int[] array = new int[] {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        System.out.println(arrayToString(array));
+        System.out.println(searchLinear(array, 57));
         selectionSort(array);
         System.out.println(arrayToString(array));
-        //System.out.println(searchLinear(array, 57));
         System.out.println(searchBinary(array, 57));
+        System.out.println(searchBinaryRecursive(array, 0, array.length - 1, 57));
     }
 
     public static int searchLinear(int[] array, int elementToFind) {
@@ -31,6 +33,20 @@ public class Main {
             }
         }
         return  -1;
+    }
+
+    public static int searchBinaryRecursive(int[] array, int startIndex, int endIndex, int elementToFind) {
+        if (endIndex >- startIndex) {
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+            if (array[middleIndex] == elementToFind) {
+                return middleIndex;
+            } else if (array[middleIndex] > elementToFind) {
+                return searchBinaryRecursive(array, startIndex, middleIndex - 1, elementToFind);
+            } else {
+                return searchBinaryRecursive(array, middleIndex + 1, endIndex, elementToFind);
+            }
+        }
+        return -1;
     }
 
     public static int[] selectionSort(int[] array) {
