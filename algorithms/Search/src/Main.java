@@ -49,14 +49,13 @@ public class Main {
         return -1;
     }
 
-    public static int[] selectionSort(int[] array) {
+    public static void selectionSort(int[] array) {
         for (int step = 0; step < array.length; step++) {
             int index = min(array, step);
             int temp = array[step];
             array[step] = array[index];
             array[index] = temp;
         }
-        return array;
     }
 
     private static int min(int[] array, int start) {
