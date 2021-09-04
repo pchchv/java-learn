@@ -27,6 +27,17 @@ public class Tree2 {
         }
     }
 
+    public static int sumRecursive(Tree root) {
+        int summ = root.value;
+        if (root.left != null) {
+            summ += sumRecursive(root.left);
+        }
+        if (root.right != null) {
+            summ += sumRecursive(root.right);
+        }
+        return summ
+    }
+
     public static int sumWide(Tree root) {
         SimpleQueue<Tree> queue = new SimpleQueue<>();
         queue.add(root);
