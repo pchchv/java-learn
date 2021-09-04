@@ -5,7 +5,7 @@ public class SimpleQueue<T> implements Queue<T> {
 
     @Override
     public void add(T item) {
-        list.add(item)
+        list.add(item);
     }
 
     @Override
