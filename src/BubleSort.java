@@ -1,4 +1,4 @@
-public class Main {
+public class BubleSort {
     /**
      * Bubble sorting algorithm
      *

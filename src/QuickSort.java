@@ -1,4 +1,4 @@
-public class Main {
+public class QuickSort {
     /**
      * Quick sorting algorithm
      * @param cmdLineArgs command-line arguments

@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class FileSearch {
     /**
      * The program searches for files in folders on the disk
      *

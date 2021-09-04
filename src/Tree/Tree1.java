@@ -1,4 +1,4 @@
-public class Main {
+public class Tree1 {
     public static void main(String[] params) {
         Tree root =
                 new Tree(20,

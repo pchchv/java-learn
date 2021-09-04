@@ -1,4 +1,4 @@
-public class Main {
+public class SelectionSort {
     /**
      * Selection sorting algorithm
      * @param cmdLineArgs command-line arguments
