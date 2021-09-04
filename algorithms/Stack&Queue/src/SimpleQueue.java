@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class SimpleQueue<T> implements Queue<T> {
-    private ArrayList<T> list = new ArrayList<>();
+    private final ArrayList<T> list = new ArrayList<>();
 
     @Override
     public void add(T item) {
@@ -16,9 +16,5 @@ public class SimpleQueue<T> implements Queue<T> {
     @Override
     public boolean isEmpty() {
         return list.isEmpty();
-    }
-
-    public boolean contains(T item) {
-        return list.contains(item);
     }
 }
