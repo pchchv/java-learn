@@ -9,6 +9,7 @@ public class Tree2 {
                 new Tree(35,
                         new Tree(31, new Tree(28), null),
                         new Tree(40, new Tree(38), new Tree(52))));
+        System.out.println("Сумма дерева: " + sumWide(root));
     }
 
     static class Tree {
@@ -24,5 +25,23 @@ public class Tree2 {
         public Tree (int value) {
             this.value = value;
         }
+    }
+
+    public static int sumWide(Tree root) {
+        SimpleQueue<Tree> queue = new SimpleQueue<>();
+        queue.add(root);
+        int summ = 0;
+        while (!queue.isEmpty()) {
+            Tree node = queue.remove();
+            System.out.println(node.value);
+            summ = summ + node.value;
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
+        return summ;
     }
 }
