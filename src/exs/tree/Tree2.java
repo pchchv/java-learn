@@ -1,6 +1,8 @@
 package exs.tree;
 
 import exs.stack_and_queue.SimpleQueue;
+import exs.stack_and_queue.SimpleStack;
+
 public class Tree2 {
     public static void main(String[] args) {
         Tree root = new Tree(20,
@@ -9,7 +11,7 @@ public class Tree2 {
                 new Tree(35,
                         new Tree(31, new Tree(28), null),
                         new Tree(40, new Tree(38), new Tree(52))));
-        System.out.println("Сумма дерева: " + sumWide(root));
+        System.out.println("Сумма дерева: " + sumDeep(root));
     }
 
     static class Tree {
@@ -35,7 +37,7 @@ public class Tree2 {
         if (root.right != null) {
             summ += sumRecursive(root.right);
         }
-        return summ
+        return summ;
     }
 
     public static int sumWide(Tree root) {
@@ -51,6 +53,23 @@ public class Tree2 {
             }
             if (node.right != null) {
                 queue.add(node.right);
+            }
+        }
+        return summ;
+    }
+
+    public static int sumDeep(Tree root) {
+        SimpleStack<Tree> stack = new SimpleStack<>();
+        stack.push(root);
+        int summ = 0;
+        while (!stack.isEmpty()) {
+            Tree node = stack.pop();
+            summ += node.value;
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
             }
         }
         return summ;
