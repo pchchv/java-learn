@@ -19,4 +19,8 @@ public class SimpleQueue<T> implements Queue<T> {
     public boolean isEmpty() {
         return list.isEmpty();
     }
+
+    public boolean contains(T item) {
+        return list.contains(item);
+    }
 }
