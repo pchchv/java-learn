@@ -1,15 +1,17 @@
+package exs.stack_and_queue;
+
 import java.util.ArrayList;
 
-public class SimpleQueue<T> implements Queue<T> {
+public class SimpleStack<T> implements Stack<T> {
     private final ArrayList<T> list = new ArrayList<>();
 
     @Override
-    public void add(T item) {
-        list.add(item);
+    public void push(T item) {
+        list.add(0, item);
     }
 
     @Override
-    public T remove() {
+    public T pop() {
         return list.remove(0);
     }
 

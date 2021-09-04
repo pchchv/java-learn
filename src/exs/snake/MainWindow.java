@@ -1,3 +1,5 @@
+package exs.snake;
+
 import javax.swing.*;
 
 public class MainWindow extends JFrame {

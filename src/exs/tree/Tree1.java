@@ -1,3 +1,5 @@
+package exs.tree;
+
 public class Tree1 {
     public static void main(String[] params) {
         Tree root =

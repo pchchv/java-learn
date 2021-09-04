@@ -1,3 +1,5 @@
+package exs;
+
 public class FindMinimum {
     /**
      * Algorithm to find minimum value in an array

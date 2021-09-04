@@ -1,3 +1,5 @@
+package exs;
+
 public class BubleSort {
     /**
      * Bubble sorting algorithm

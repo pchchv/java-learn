@@ -1,3 +1,6 @@
+package exs.tree;
+
+import exs.stack_and_queue.SimpleQueue;
 public class Tree2 {
     public static void main(String[] args) {
         Tree root = new Tree(20,

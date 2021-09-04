@@ -1,3 +1,5 @@
+package exs;
+
 public class SelectionSort {
     /**
      * Selection sorting algorithm

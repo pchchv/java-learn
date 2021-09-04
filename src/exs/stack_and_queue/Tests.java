@@ -1,3 +1,5 @@
+package exs.stack_and_queue;
+
 public class Tests {
     public static void main(String[] args) {
         stackTest();

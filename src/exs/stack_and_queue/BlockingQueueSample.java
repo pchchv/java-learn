@@ -1,3 +1,5 @@
+package exs.stack_and_queue;
+
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class BlockingQueueSample {

@@ -1,3 +1,5 @@
+package exs;
+
 public class QuickSort {
     /**
      * Quick sorting algorithm
