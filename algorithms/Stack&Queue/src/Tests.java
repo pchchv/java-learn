@@ -1,6 +1,7 @@
 public class Tests {
     public static void main(String[] args) {
-        stackTest();
+        // stackTest();
+        queueTest();
     }
 
     public static void stackTest() {
@@ -12,6 +13,18 @@ public class Tests {
         System.out.println("\n");
         while (!stack.isEmpty()) {
             System.out.println(stack.pop());
+        }
+    }
+
+    public static void queueTest() {
+        SimpleQueue<Integer> queue = new SimpleQueue<>();
+        for (int i = 1; i < 10; i++) {
+            System.out.println(i);
+            queue.add(i);
+        }
+        System.out.println("\n");
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
         }
     }
 }
