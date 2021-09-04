@@ -1,6 +1,7 @@
 package exs.tree.graph;
 
 import exs.tree.graph.model.GraphModel;
+import exs.tree.graph.view.FieldComponent;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,5 +13,8 @@ public class GraphMain {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         GraphModel graphModel = new GraphModel();
+
+        BorderLayout borderLayout = new BorderLayout();
+        FieldComponent field = new FieldComponent(graphModel);
     }
 }

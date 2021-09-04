@@ -24,7 +24,7 @@ public class GraphModel {
                                 j + l < FIELD_WIDTH &&
                                 (k != 0 || l != 0)) {
                             nodes[i][j].neighbors.add(nodes[i + k][j + l]);
-                        })
+                        }
                     }
                 }
             }
